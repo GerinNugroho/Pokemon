@@ -173,6 +173,12 @@ h2 {
   text-align: center;
 }
 
+footer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 13px;
+}
+
 @media screen and (max-width: 767.98px) {
   .status-container .status-item {
     flex-direction: column;
