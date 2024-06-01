@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Ubuntu;
 }
 
 h2 {
@@ -69,6 +70,8 @@ h2 {
   background-color: white;
   border: 5px solid black;
   border-radius: 10px;
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
 .container .button {
@@ -147,11 +150,14 @@ h2 {
 
 .type-item,
 .ability-item {
-  background-color: gainsboro;
+  background-color: rgb(130, 121, 121);
   min-width: 60px;
   padding: 3px 0;
   text-align: center;
   border-radius: 5px;
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
 .ability-item {

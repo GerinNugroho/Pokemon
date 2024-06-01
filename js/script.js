@@ -19,11 +19,8 @@ async function getData() {
 
   displayType(arrayStatus[id].types);
   displayAbility(arrayStatus[id].abilities);
-
-  setInterval(() => {
-    displayName(arrayName[id]);
-    displayStatus(arrayStatus[id].stats[0].base_stat, arrayStatus[id].stats[1].base_stat);
-  }, 0);
+  displayName(arrayName[id]);
+  displayStatus(arrayStatus[id].stats[0].base_stat, arrayStatus[id].stats[1].base_stat);
 }
 
 for (i = 0; i < 20; i++) {
@@ -53,20 +50,20 @@ function displayType(type) {
     Type.className = 'type-item';
     Type.textContent = `${type[i].type.name}`;
 
-    if (Type.textContent == 'grass') {
-      Type.style.backgroundColor = 'Green';
-    } else if (Type.textContent == 'poison') {
-      Type.style.backgroundColor = 'purple';
+    if (Type.textContent == 'normal') {
+      Type.style.backgroundColor = '#A8A878';
+    } else if (Type.textContent == 'grass') {
+      Type.style.backgroundColor = '#78C850';
     } else if (Type.textContent == 'fire') {
-      Type.style.backgroundColor = 'red';
-    } else if (Type.textContent == 'flying') {
-      Type.style.backgroundColor = 'skyblue';
-    } else if (Type.textContent == 'normal') {
-      Type.style.backgroundColor = 'gainsboro';
-    } else if (Type.textContent == 'bug') {
-      Type.style.backgroundColor = 'gray';
+      Type.style.backgroundColor = '#F08030';
     } else if (Type.textContent == 'water') {
-      Type.style.backgroundColor = 'blue';
+      Type.style.backgroundColor = '#6890F0';
+    } else if (Type.textContent == 'bug') {
+      Type.style.backgroundColor = '#A8B820';
+    } else if (Type.textContent == 'poison') {
+      Type.style.backgroundColor = '#A040A0';
+    } else if (Type.textContent == 'flying') {
+      Type.style.backgroundColor = '#EE99AC';
     }
 
     TypeContainer.appendChild(Type);
@@ -95,6 +92,8 @@ up.addEventListener('click', () => {
   }
   displayType(arrayStatus[id].types);
   displayAbility(arrayStatus[id].abilities);
+  displayName(arrayName[id]);
+  displayStatus(arrayStatus[id].stats[0].base_stat, arrayStatus[id].stats[1].base_stat);
 });
 
 down.addEventListener('click', () => {
@@ -108,6 +107,8 @@ down.addEventListener('click', () => {
   }
   displayType(arrayStatus[id].types);
   displayAbility(arrayStatus[id].abilities);
+  displayName(arrayName[id]);
+  displayStatus(arrayStatus[id].stats[0].base_stat, arrayStatus[id].stats[1].base_stat);
 });
 
 getData();
